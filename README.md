@@ -1,2 +1,2 @@
 # Lista3_FPA
-Respostas da lista de exercícios 2 desenvolvida na cadeira Fundamentos de Programação Aplicada do PPGIA.
+Respostas da lista de exercícios 3, desenvolvida na cadeira Fundamentos de Programação Aplicada do PPGIA.
