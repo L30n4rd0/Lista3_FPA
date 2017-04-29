@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ufrpe.fpa.questao5;
+package ufrpe.fpa.q5;
 
 import java.util.Scanner;
 

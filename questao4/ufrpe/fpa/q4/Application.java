@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ufrpe.fpa.questao4;
+package ufrpe.fpa.q4;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ufrpe.fpa.questao4;
+package ufrpe.fpa.q4;
 
 /**
  * @author leonardo
