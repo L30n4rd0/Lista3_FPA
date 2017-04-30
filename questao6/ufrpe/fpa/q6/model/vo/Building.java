@@ -10,7 +10,7 @@ import java.util.List;
  * @author leonardo
  *
  */
-public class Immobile {
+public class Building {
 	private String name;
 	private int floorsNumber, apartmentsPerFloor, totalApartaments;
 	private Address address;
@@ -22,7 +22,7 @@ public class Immobile {
 	 * @param apartmentsPerFloor
 	 * @param address
 	 */
-	public Immobile(String name, int floorsNumber, int apartmentsPerFloor, Address address) {
+	public Building(String name, int floorsNumber, int apartmentsPerFloor, Address address) {
 		super();
 		this.name = name;
 		this.floorsNumber = floorsNumber;
@@ -38,13 +38,6 @@ public class Immobile {
 	 */
 	public String getName() {
 		return name;
-	}
-	
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
 	}
 	
 	/**

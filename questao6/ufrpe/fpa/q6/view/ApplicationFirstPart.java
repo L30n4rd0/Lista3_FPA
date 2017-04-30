@@ -3,14 +3,14 @@ package ufrpe.fpa.q6.view;
 import ufrpe.fpa.q6.model.vo.Address;
 import ufrpe.fpa.q6.model.vo.Apartment;
 import ufrpe.fpa.q6.model.vo.CommonAreaItem;
-import ufrpe.fpa.q6.model.vo.Immobile;
+import ufrpe.fpa.q6.model.vo.Building;
 
-public class Main {
+public class ApplicationFirstPart {
 	public static void main(String[] args) {
-		Immobile[] immobiles = new Immobile[2];
+		Building[] immobiles = new Building[2];
 		
-		immobiles[0] = new Immobile("Rio Branco", 2, 2, new Address("Brasil", "PE", "Recife", "Antonio coelho", "Varzea", 23));
-		immobiles[1] = new Immobile("Acassio", 2, 2, new Address("Brasil", "PE", "Recife", "Antonio coelho", "Varzea", 25));
+		immobiles[0] = new Building("Rio Branco", 2, 2, new Address("Brasil", "PE", "Recife", "Antonio coelho", "Varzea", 23));
+		immobiles[1] = new Building("Acassio", 2, 2, new Address("Brasil", "PE", "Recife", "Antonio coelho", "Varzea", 25));
 		
 		immobiles[0].getCommonArea().add(new CommonAreaItem("Piscina", "Piscina grande e com proteção"));
 		immobiles[0].getCommonArea().add(new CommonAreaItem("Quadra de futebol", "Quadra coberta"));
