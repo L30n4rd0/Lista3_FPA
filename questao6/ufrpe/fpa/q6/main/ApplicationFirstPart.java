@@ -1,4 +1,4 @@
-package ufrpe.fpa.q6.view;
+package ufrpe.fpa.q6.main;
 
 import ufrpe.fpa.q6.model.vo.Address;
 import ufrpe.fpa.q6.model.vo.Apartment;

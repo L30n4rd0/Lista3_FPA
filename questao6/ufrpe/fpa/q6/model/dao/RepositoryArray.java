@@ -52,15 +52,17 @@ public class RepositoryArray implements InterfaceRepository {
 	 * @see ufrpe.fpa.q6.model.dao.InterfaceRepository#deleteImmobile(java.lang.String)
 	 */
 	@Override
-	public void deleteBuilding(String name) {
+	public boolean deleteBuilding(String name) {
 		
-		for (Building building : this.buildingList) {
-			if (building.getName().equalsIgnoreCase(name)) {
-				this.buildingList.remove(building);
-				break;
-			}
-		}
-
+		Building buildingToDelete = this.getBuildingByName(name);
+		
+		if (buildingToDelete != null) {
+			this.buildingList.remove(buildingToDelete);
+			return true;
+			
+		} else
+			return false;
+		
 	}
 
 	/* (non-Javadoc)

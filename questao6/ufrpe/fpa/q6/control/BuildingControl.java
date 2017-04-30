@@ -15,10 +15,24 @@ import ufrpe.fpa.q6.model.vo.Building;
  */
 public class BuildingControl {
 	
+	private static BuildingControl uniqueInstance;
+	
 	private InterfaceRepository repository;
 	
-	public BuildingControl() {
+	private BuildingControl() {
+		uniqueInstance = null;
 		this.repository = new RepositoryArray();
+		
+	}
+	
+	/*
+	 * Create a single instance to facilitate the data management
+	 * */  
+	public static synchronized BuildingControl getInstance() {
+		if (uniqueInstance == null)
+			uniqueInstance = new BuildingControl();
+
+		return uniqueInstance;
 		
 	}
 	
@@ -32,8 +46,8 @@ public class BuildingControl {
 		
 	}
 	
-	public void deleteBuilding(String name) {
-		this.repository.deleteBuilding(name);
+	public boolean deleteBuilding(String name) {
+		return this.repository.deleteBuilding(name);
 		
 	}
 	

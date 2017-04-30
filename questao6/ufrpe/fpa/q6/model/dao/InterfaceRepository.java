@@ -26,7 +26,7 @@ public interface InterfaceRepository {
 	/*
 	 * Delete a building from the actual repository
 	 * */
-	public void deleteBuilding(String name);
+	public boolean deleteBuilding(String name);
 	
 	/*
 	 * Get all building registered on the actual repository

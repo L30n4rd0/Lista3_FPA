@@ -35,9 +35,9 @@ public class RepositorySQL implements InterfaceRepository {
 	 * @see ufrpe.fpa.q6.model.dao.InterfaceRepository#deleteBuilding(java.lang.String)
 	 */
 	@Override
-	public void deleteBuilding(String name) {
+	public boolean deleteBuilding(String name) {
 		// TODO Auto-generated method stub
-
+		return true;
 	}
 
 	/* (non-Javadoc)
