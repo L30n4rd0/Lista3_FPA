@@ -86,7 +86,7 @@ public class Address {
 	@Override
 	public String toString() {
 
-		return "\nRua " + this.street + ", " + this.number + "." + 
+		return "\nRua: " + this.street + ", " + this.number + "." + 
 				"\nBairro: " + this.neighborhood + ", " + 
 				this.city + ", " + 
 				this.state + ", " + 

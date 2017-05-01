@@ -81,6 +81,30 @@ public class ViewSearch {
 	}
 	
 	private void searchByFilter() {
+		ViewRegister viewRegister = new ViewRegister();
+		
+		BuildingControl control = BuildingControl.getInstance();
+		
+		System.out.println("Preencha o formulário com os dados que serão pesquisados.\n"
+				+ "Caso não queira incluir uma determinada característica ao filtro deixe em branco!");
+		
+		Building building = viewRegister.completeForm();
+		
+		List<Building> buildingList = control.getFilteredBuildingList(building);
+		
+		if (!buildingList.isEmpty()) {
+			System.out.println("### Imóveis encontrados ###");
+			System.out.println("Quantidade: " + buildingList.size());
+			
+			for (Building tempBuilding : buildingList) {
+				System.out.println(tempBuilding.toString());
+				System.out.println("***********************************************************************");
+			}
+			
+			System.out.println("Litagem finalizada!");
+			
+		} else		
+			System.out.println("Não foi encontrado imóveis com essas caracterísicas!!");
 		
 	}
 	
@@ -91,6 +115,7 @@ public class ViewSearch {
 		
 		if (!buildingList.isEmpty()) {
 			System.out.println("### Todos os imóveis ###");
+			System.out.println("Quantidade: " + buildingList.size());
 			
 			for (Building building : buildingList) {
 				System.out.println(building.toString());
@@ -110,7 +135,7 @@ public class ViewSearch {
 				+ "Escolha uma opçao:\n"
 				+ "1 - Pesquisar por nome\n"
 				+ "2 - Pesquisa avançada com filtros\n"
-				+ "3 - Listar todos os cadastro\n"
+				+ "3 - Listar todos os cadastrados\n"
 				+ "0 - Voltar para o menu principal\n";
 		
 	}

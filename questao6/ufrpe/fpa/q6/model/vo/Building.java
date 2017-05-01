@@ -15,7 +15,7 @@ public class Building {
 	private int floorsNumber, apartmentsPerFloor, totalApartaments;
 	private Address address;
 	private List<CommonAreaItem> commonArea;
-	private Apartment[] apartments;
+	private List<Apartment> apartments;
 	/**
 	 * @param name
 	 * @param floorsNumber
@@ -28,9 +28,9 @@ public class Building {
 		this.floorsNumber = floorsNumber;
 		this.apartmentsPerFloor = apartmentsPerFloor;
 		this.address = address;
-		this.commonArea = new ArrayList<>();
 		this.totalApartaments = floorsNumber * apartmentsPerFloor;
-		this.apartments = new Apartment[totalApartaments];
+		this.commonArea = new ArrayList<>();
+		this.apartments = new ArrayList<>();
 	}
 	
 	/**
@@ -71,7 +71,7 @@ public class Building {
 	/**
 	 * @return the apartments
 	 */
-	public Apartment[] getApartments() {
+	public List<Apartment> getApartments() {
 		return apartments;
 	}
 	
@@ -93,17 +93,19 @@ public class Building {
 				"\nNúmero de andares: " + this.floorsNumber + 
 				"\nApartamentos por andar: " + this.apartmentsPerFloor +
 				
-				"\n##Endereço##" + 
+				"\n\n##Endereço##" + 
 				this.address.toString() + 
 				
-				"\n##Área comum##";
+				"\n\n## Área comum ##";
 		
 		for (CommonAreaItem commonArea : this.commonArea)
 			stringReturn += "\n" + commonArea.toString();
 			
-		stringReturn += "\n##Todos os apartamentos##"; 
-		for (int i = 0; i < apartments.length; i++)
-			stringReturn += "\n" + apartments[i].toString();
+		stringReturn += "\n\n## Todos os apartamentos ##";
+		for (Apartment apartment : apartments)
+			
+		for (int i = 0; i < apartments.size(); i++)
+			stringReturn += "\n>>Apartamento: " + (i + 1) + "\n" + apartments.get(i).toString();
 		
 		return stringReturn;
 		
