@@ -15,6 +15,7 @@ public class ViewPrincipal {
 	private ViewDelete viewDelete;
 	private ViewRegister viewRegister;
 	private ViewSearch viewSearch;
+	private Scanner scanner;
 	
 	/**
 	 */
@@ -27,7 +28,7 @@ public class ViewPrincipal {
 	
 	public void start() {
 		int option = 100;
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		
 		while (option != 0) {
 			System.out.println(menuPrincipal());
@@ -41,7 +42,6 @@ public class ViewPrincipal {
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				

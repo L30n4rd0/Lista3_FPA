@@ -17,6 +17,8 @@ import ufrpe.fpa.q6.model.vo.CommonAreaItem;
  */
 public class ViewRegister {
 	
+	private Scanner scanner;
+
 	protected void register() {
 		BuildingControl control = BuildingControl.getInstance();
 		
@@ -29,10 +31,7 @@ public class ViewRegister {
 	}
 	
 	protected Building completeForm() {
-		/*
-		 * Scanner for data collection
-		 * */
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		
 		/*
 		 * General attributes
@@ -83,6 +82,10 @@ public class ViewRegister {
 		if (tempString.equalsIgnoreCase("S")) {
 			Apartment apartment = apartmentForm();
 			
+			/*
+			 * Condition used on the search filter function 
+			 * to have at least one apartment in the search
+			 */
 			if (building.getTotalApartaments() == 0) {
 				building.getApartments().add(apartment);
 				
@@ -135,11 +138,11 @@ public class ViewRegister {
 		return building;
 	}
 	
-	private Address addressForm() {
+	protected Address addressForm() {
 		/*
 		 * Scanner for data collection
 		 * */
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		
 		/*
 		 * Address attributes
@@ -176,7 +179,7 @@ public class ViewRegister {
 		/*
 		 * Scanner for data collection
 		 * */
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		
 		/*
 		 * Apartament attributes
@@ -247,7 +250,7 @@ public class ViewRegister {
 		/*
 		 * Scanner for data collection
 		 * */
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		
 		/*
 		 * Apartament attributes

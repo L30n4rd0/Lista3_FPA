@@ -13,8 +13,10 @@ import ufrpe.fpa.q6.control.BuildingControl;
  */
 public class ViewDelete {
 	
+	private Scanner scanner;
+
 	protected void delete() {
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		System.out.println("Digite o nome do imóvel para deletar:\n");
 		String name  = scanner.nextLine();
 		

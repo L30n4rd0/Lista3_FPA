@@ -34,6 +34,13 @@ public class Building {
 	}
 	
 	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
 	 * @return the name
 	 */
 	public String getName() {
@@ -61,6 +68,13 @@ public class Building {
 		return address;
 	}
 	
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	/**
 	 * @return the commonArea
 	 */
@@ -102,8 +116,6 @@ public class Building {
 			stringReturn += "\n" + commonArea.toString();
 			
 		stringReturn += "\n\n## Todos os apartamentos ##";
-		for (Apartment apartment : apartments)
-			
 		for (int i = 0; i < apartments.size(); i++)
 			stringReturn += "\n>>Apartamento: " + (i + 1) + "\n" + apartments.get(i).toString();
 		

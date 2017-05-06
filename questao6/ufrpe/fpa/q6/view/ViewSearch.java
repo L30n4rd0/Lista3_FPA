@@ -15,10 +15,12 @@ import ufrpe.fpa.q6.model.vo.Building;
  */
 public class ViewSearch {
 	
+	private Scanner scanner;
+
 	protected void startSearch() {
 		int option = 100;
 		
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		
 		while (option != 0) {
 			System.out.println(menuSearch());
@@ -64,7 +66,7 @@ public class ViewSearch {
 	}
 	
 	private void searchByName() {
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		System.out.println("Digite o nome do imóvel para pesquisa:\n");
 		String name  = scanner.nextLine();
 		
